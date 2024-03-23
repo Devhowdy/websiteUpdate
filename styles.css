@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+    
+       :root {
+  --glow-rgb: 259 42 201;
+}
+
+body {
+  background-image: linear-gradient(to bottom, #d4e9f7, #ffffff);
+  height: 200vh;
+  overflow: hidden;
+}
+@media screen and (max-width: 600px) {
+    body {
+        background-image: linear-gradient(to bottom, #d4e9f7, #ffffff);
+        height: 200vh;
+        overflow: hidden;
+    }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.glow-point {
+  position: absolute;
+  box-shadow: 0rem 0rem 1.2rem 0.6rem rgb(var(--glow-rgb));
+  pointer-events: none;
+}
+
+.star {
+  position: absolute;
+  z-index: 2;
+  color: white;
+  font-size: 1rem;
+  animation-duration: 1500ms;
+  animation-fill-mode: forwards;
+  pointer-events: none;
+}
+
+@keyframes fall-1 {
+  0% {
+    transform: translate(0px, 0px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(0.25);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(10px, -10px) rotateX(45deg) rotateY(30deg) rotateZ(0deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(25px, 200px) rotateX(180deg) rotateY(270deg) rotateZ(90deg) scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-2 {
+  0% {
+    transform: translate(0px, 0px) rotateX(-20deg) rotateY(10deg) scale(0.25);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(-10px, -5px) rotateX(-20deg) rotateY(10deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-10px, 160px) rotateX(-90deg) rotateY(45deg) scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes fall-3 {
+  0% {
+    transform: translate(0px, 0px) rotateX(0deg) rotateY(45deg) scale(0.5);
+    opacity: 0;
+  }
+  15% {
+    transform: translate(7px, 5px) rotateX(0deg) rotateY(45deg) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(20px, 120px) rotateX(-180deg) rotateY(-90deg) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  /* Styles for iPhone 5.5-inch */
+}
+
+button ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse; /* Reverse the order of buttons */
+    }
+button {
+    background-color: transparent; /* Transparent background */
+    border: none;
+    color: black;
+    padding: 5px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    outline: none;
+    text-align: right;
+    opacity: 0.7; /* Adjusted opacity */
+    box-shadow: 0.3px 0.3px 0.3px rgba(0, 0, 0, 0.3); /* Corrected box shadow */
+    float: right; /* Align to the right */
+}
+@media screen and (max-width: 600px) {
+    button ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: row-reverse; /* Reverse the order of buttons */
+    }
+
+@media screen and (max-width: 600px) {
+    button {
+        background-color: transparent;
+        width: calc(12% - 12px); /* Adjusted width */
+        margin: 5px; /* Added margin */
+        padding: 5px 10px; /* Adjusted padding */
+        
+        font-family: 'Lato', sans-serif;
+        line-height: 1.5;
+        font-size: 1.2vw;
+        text-transform: uppercase;
+        text-rendering: optimizeLegibility;
+    }
+}
+
+
+button:active {
+    background-color: #gradient; /* Adjusted background color */
+    box-shadow: none;
+}
+
